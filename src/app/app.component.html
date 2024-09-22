@@ -71,11 +71,51 @@
 
 <!-- Fetch array objects -->
 
-<ul>
-  <li *ngFor="let user of usersObj; let i = index">{{i + 1}} {{user.name}}
-    <button (click)="onDelete(i)">Delete</button>
-  </li>
-</ul>
-
+<!-- <div *ngIf="usersObj.length == 0"> -->
+<!--   <p>No Users to Display</p> -->
+<!-- </div> -->
+<!---->
+<!-- <ul> -->
+<!--   <li *ngFor="let user of usersObj; let i = index; let usersCount = count; let first = first; let last = last"> -->
+<!--     {{first}} / {{last}} - {{usersCount}} - {{i + 1}} {{user.name}} -->
+<!--     <button (click)="onDelete(i)">Delete</button> -->
+<!--   </li> -->
+<!-- </ul> -->
+<!---->
 <!-- Change Detection -->
-<button (click)="addNewUser()">Add new user</button>
+<!-- <button (click)="addNewUser()">Add new user</button> -->
+
+<!-- <div [ngSwitch]="usersRole"> -->
+<!--   <p *ngSwitchCase="'Admin'">Welcome Admin</p> -->
+<!--   <p *ngSwitchCase="'Member'">Welcome Member</p> -->
+<!-- </div> -->
+<!---->
+<!-- @switch(usersRole) { -->
+<!-- @case('Admin') { -->
+<!-- <p>Welcome Admin</p> -->
+<!-- } -->
+<!-- @case('Member') { -->
+<!-- <p>Welcome Member</p> -->
+<!-- } -->
+<!-- @default { -->
+<!-- <p>Log in</p> -->
+<!-- } -->
+<!-- } -->
+
+<!-- NgStyle -->
+
+<!-- <h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'"> -->
+<!--   Welcome Admin -->
+<!-- </h1> -->
+<!---->
+<!-- <h1 [ngStyle]="{ 'color': isLoggedIn ? 'green' : 'red'}"> -->
+<!--   Ng Style Directive -->
+<!-- </h1> -->
+
+<!-- ng class -->
+<h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn">Class binding</h1>
+
+<h1 [ngClass]="{
+  'login': isLoggedIn,
+  'logout': !isLoggedIn
+  }">Ng Class Directive</h1>

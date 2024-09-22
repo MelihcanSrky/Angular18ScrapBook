@@ -1,7 +1,9 @@
-.active {
-  background-color: green;
+.login {
+  color: green;
+  text-transform: uppercase;
 }
 
-.no-active {
-  background-color: red;
+.logout {
+  color: red;
+  text-transform: lowercase;
 }
