@@ -1,5 +1,8 @@
 # FirstAngularApp
 
+https://www.youtube.com/watch?v=coqU17HJfL8&list=PLG6SdLSnBhdWj797VAEvABNYIBEaVQnfF&index=12
+part 17
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
 ## Development server

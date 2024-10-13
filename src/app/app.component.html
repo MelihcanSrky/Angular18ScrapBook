@@ -113,9 +113,29 @@
 <!-- </h1> -->
 
 <!-- ng class -->
-<h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn">Class binding</h1>
+<!-- <h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn">Class binding</h1> -->
+<!---->
+<!-- <h1 [ngClass]="{ -->
+<!--   'login': isLoggedIn, -->
+<!--   'logout': !isLoggedIn -->
+<!--   }">Ng Class Directive</h1> -->
 
-<h1 [ngClass]="{
-  'login': isLoggedIn,
-  'logout': !isLoggedIn
-  }">Ng Class Directive</h1>
+<!-- <h1>{{appPostTitle}}</h1> -->
+<!-- <app-post-list [postListTitle]="appPostTitle" [postIsLogin]="appIsLogin"></app-post-list> -->
+<app-post-list (MessageEvent)="receiveMessage($event)"></app-post-list>
+
+<!-- <p>{{ message }}</p> -->
+<!---->
+<!-- <p>{{ messageFromChild }}</p> -->
+
+<!-- <app-card> -->
+<!--   <h2>John Doe</h2> -->
+<!--   <p>13.10.2024</p> -->
+<!--   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+<!-- </app-card> -->
+
+<!-- ng-content usage -->
+<app-card>
+  <span header> username </span>
+  <h1 body>John Doe</h1>
+</app-card>
