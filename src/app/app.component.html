@@ -122,7 +122,7 @@
 
 <!-- <h1>{{appPostTitle}}</h1> -->
 <!-- <app-post-list [postListTitle]="appPostTitle" [postIsLogin]="appIsLogin"></app-post-list> -->
-<app-post-list (MessageEvent)="receiveMessage($event)"></app-post-list>
+<!-- <app-post-list (MessageEvent)="receiveMessage($event)"></app-post-list> -->
 
 <!-- <p>{{ message }}</p> -->
 <!---->
@@ -135,7 +135,17 @@
 <!-- </app-card> -->
 
 <!-- ng-content usage -->
-<app-card>
-  <span header> username </span>
-  <h1 body>John Doe</h1>
-</app-card>
+<!-- <app-card> -->
+<!--   <span header> username </span> -->
+<!--   <h1 body>John Doe</h1> -->
+<!-- </app-card> -->
+
+<!---->
+<!-- <div *ngComponentOutlet="loadComponent()"> -->
+<!---->
+<!-- </div> -->
+
+<!-- <button (click)="loadComponent()">Create Component!</button> -->
+
+<app-profile [pUsername]="username"></app-profile>
+<button (click)="changeUsername()">Change Username</button>
